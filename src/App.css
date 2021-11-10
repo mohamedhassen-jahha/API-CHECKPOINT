@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.UserList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 20px auto;
+  justify-content: space-between;
+}
