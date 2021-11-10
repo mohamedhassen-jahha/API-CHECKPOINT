@@ -3,13 +3,13 @@ import axios from "axios";
 import User from "../User/User";
 
 function UserList() {
-  const [Data, setData] = useState([]);
+  const [listOfUSer, setlistOfUSer] = useState([]);
 
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then(function (res) {
-        setData(res.data);
+        setlistOfUSer(res.data);
         console.log(res.data);
       })
       .catch(function (err) {
@@ -19,7 +19,7 @@ function UserList() {
 
   return (
     <div className="UserList">
-      {Data.map((user) => (
+      {listOfUSer.map((user) => (
         <User key={user.id} id={user.id} data={user} />
       ))}
     </div>
